@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.edu.utfpr.lembretes.dto.PessoaDTO;
 import br.edu.utfpr.lembretes.model.Pessoa;
 import br.edu.utfpr.lembretes.service.PessoaService;
+import jakarta.validation.Valid;
 
 /**
  * Controlador REST para gerenciar operações relacionadas a pessoas.
@@ -41,7 +42,7 @@ public class PessoaController {
      * Recebe um objeto PessoaDTO no corpo da requisição e retorna a pessoa criada.
      */
     @PostMapping
-    public Pessoa criar(@RequestBody PessoaDTO dto) {
+    public Pessoa criar(@Valid @RequestBody PessoaDTO dto) {
         return service.salvar(dto);
     }
 
