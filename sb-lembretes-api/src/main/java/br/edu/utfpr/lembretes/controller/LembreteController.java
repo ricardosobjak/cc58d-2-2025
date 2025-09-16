@@ -25,7 +25,7 @@ public class LembreteController {
     }
 
     @PostMapping
-    public LembreteDTO criar(@PathVariable String pessoaId, @RequestBody LembreteDTO dto) {
+    public LembreteDTO criar(@PathVariable String pessoaId, @Valid @RequestBody LembreteDTO dto) {
         return service.salvar(pessoaId, dto);
     }
 

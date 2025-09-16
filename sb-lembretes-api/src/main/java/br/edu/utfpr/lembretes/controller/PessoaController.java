@@ -89,7 +89,7 @@ public class PessoaController {
      * @return
      */
     @PutMapping("/{id}")
-    public Pessoa atualizar(@PathVariable String id, @RequestBody PessoaDTO dto) {
+    public Pessoa atualizar(@PathVariable String id, @Valid @RequestBody PessoaDTO dto) {
         return service.atualizar(id, dto);
     }
 }
