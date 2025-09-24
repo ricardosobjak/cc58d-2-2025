@@ -1,0 +1,19 @@
+@URL=http://localhost:8080
+
+@ID_PESSOA=19fa0bb3-bd65-4503-bd4c-94cc6952b43b
+
+
+### Criar um lembrete para uma pessoa
+POST {{URL}}/pessoa/{{ID_PESSOA}}/lembretes
+Content-Type: application/json
+
+{
+  "mensagem": "Comprar ração",
+  "dataHora": "2025-09-09T10:00:00"
+}
+
+
+
+### Listar lembretes de uma pessoa
+GET {{URL}}/pessoa/{{ID_PESSOA}}/lembretes?pagina=2&tamanho=2
+Accept: application/json

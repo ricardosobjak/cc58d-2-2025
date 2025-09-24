@@ -1,0 +1,37 @@
+@URL=http://localhost:8080
+
+@ID=d280c2bd-f0b0-42b0-b0dc-d653799d5864
+
+
+### Criar uma nova pessoa
+POST {{URL}}/pessoa
+Content-Type: application/json
+
+{
+  "nome": "Ricardo",
+  "email": "ricardo@gmail.com"
+}
+
+
+### Listar todas as pessoas
+GET {{URL}}/pessoa
+Accept: application/json
+
+
+### Obter uma pessoa por ID
+GET {{URL}}/pessoa/{{ID}}
+Accept: application/json
+
+
+### Deletar uma pessoa por ID
+DELETE {{URL}}/pessoa/{{ID}}
+
+
+### Atualizar uma pessoa por ID
+PUT {{URL}}/pessoa/{{ID}}
+Content-Type: application/json
+
+{
+  "nome": "Juca Saraiva",
+  "email": "juca@bol.com.br"
+}
