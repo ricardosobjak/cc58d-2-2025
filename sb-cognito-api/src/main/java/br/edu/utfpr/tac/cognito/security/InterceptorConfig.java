@@ -17,7 +17,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class InterceptorConfig implements WebMvcConfigurer {
 
     // Injeção do interceptor personalizado
-    @Autowired
+    @Autowired  
     private CognitoTokenValidationInterceptor cognitoTokenValidationInterceptor;
 
     @Override

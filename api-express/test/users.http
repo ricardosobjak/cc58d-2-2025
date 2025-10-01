@@ -1,0 +1,14 @@
+@URL=http://localhost:3000/users
+
+### CRIAR USUARIO
+POST {{URL}}
+Content-Type: application/json
+
+{
+    "name": "Juca",
+    "email": "juca@gmail.com"
+}
+
+
+### Obter todos os usuários
+GET {{URL}}
